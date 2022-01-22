@@ -102,3 +102,9 @@ ENV/
 
 *.iml
 .idea/
+
+# vim 
+*.vim
+
+# tags
+tags
