@@ -45,6 +45,12 @@ def add_expense():
     transactions.append(expense)
     return "", 204
 
+@app.route('/all')
+def get_all():
+    schema = IncomeSchema(many=True)
+    all = schema.dump(transactions)
+    return jsonify(all)
+
 
 if __name__ == "__main__":
     app.run()
